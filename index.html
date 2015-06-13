@@ -21,43 +21,19 @@
 
         <div class="container">
 
-            <h1>Hi! This is Your Angular Application Boilerplate.</h1>
+            <h1>Events Page</h1>
             
-            <div ng-controller="mockDataController">
-                <!-- <p>{{mockData}}</p> -->
-                <ul>
-                    <li ng-repeat="event in mockData">{{event.category}}</li>
-                </ul>
-            </div>
-
-            <div ng-controller="SecondController">
-                <p>{{welcomeAgain}}</p>
-            </div>
-
-            <div id="events-list">
-                <div class="event">
-                    <img src="" alt="">
-                    <div class="event-details">
-                        <h2>Date - Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde et nihil fugit delectus optio vitae accusamus ullam cumque obcaecati quos vel provident, sapiente fuga inventore ducimus quasi, voluptate ipsum.</p>
+            <div class="media" ng-controller="mockDataController">
+                <div ng-repeat="event in mockData">
+                    <div class="media-left">
+                        <a href="#">
+                          <!-- <img class="media-object" ng-src="{{event.image_url}}" alt="..."> -->
+                        </a>
                     </div>
-                    <a href="" class="view">Details</a>
-                </div>
-                <div class="event">
-                    <img src="" alt="">
-                    <div class="event-details">
-                        <h2>Date - Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde et nihil fugit delectus optio vitae accusamus ullam cumque obcaecati quos vel provident, sapiente fuga inventore ducimus quasi, voluptate ipsum.</p>
+                    <div class="media-body">
+                        <h4>{{event.date}} {{event.name}}</h4>
+                        <p>{{event.description}}</p>
                     </div>
-                    <a href="" class="view">Details</a>
-                </div>
-                <div class="event">
-                    <img src="" alt="">
-                    <div class="event-details">
-                        <h2>Date - Title</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat unde et nihil fugit delectus optio vitae accusamus ullam cumque obcaecati quos vel provident, sapiente fuga inventore ducimus quasi, voluptate ipsum.</p>
-                    </div>
-                    <a href="" class="view">Details</a>
                 </div>
             </div>
         </div>
