@@ -1,5 +1,6 @@
-'use strict';
-
 (function(){
-	var app = angular.module('eventsApp', []);
+	var app = angular.module('eventsApp', [
+		'eventsController'
+	])
 })();
+

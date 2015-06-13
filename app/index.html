@@ -17,15 +17,15 @@
         <link rel="stylesheet" href="assets/css/style.css">
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body ng-app='eventsApp'>
+    <body ng-app="eventsApp">
   
         <h1>Hi! This is Your Angular Application Boilerplate.</h1>
         
-        <div ng-controller="FirstCtrl as ctrl">
+        <div ng-controller="SampleController as ctrl">
             <p>{{ctrl.welcome}}</p>
         </div>
 
-        <div ng-controller="SecondCtrl">
+        <div ng-controller="SecondController">
             <p>{{welcomeAgain}}</p>
         </div>
 
@@ -36,7 +36,9 @@
 
         <script src="assets/js/vendor/angular.min.js"></script>
 
+        <script src="assets/js/controllers/controller.js"></script>
         <script src="app/app.js"></script>
+        
 
     </body>
 </html>
