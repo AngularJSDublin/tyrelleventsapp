@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -21,13 +21,11 @@
   
         <h1>Hi! This is Your Angular Application Boilerplate.</h1>
         
-        <div ng-controller="mockDataController">
-            <p>{{mockData}}</p>
-        </div>
+        <ul ng-repeat="event in mockData">
+          <li >{{event.description}}</li>  
+        </ul>
 
-        <div ng-controller="SecondController">
-            <p>{{welcomeAgain}}</p>
-        </div>
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
