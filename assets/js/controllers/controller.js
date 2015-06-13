@@ -6,6 +6,7 @@
 	.controller('mockDataController', ['$scope', '$http', function($scope, $http){
 		$http.get('https://tyrelleventsdb.firebaseio.com/events.json').success(function(data){
 			$scope.mockData = data;
+			$scope.category = data.category;
 		});
 	}])
 
