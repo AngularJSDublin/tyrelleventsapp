@@ -24,7 +24,10 @@
             <h1>Hi! This is Your Angular Application Boilerplate.</h1>
             
             <div ng-controller="mockDataController">
-                <p>{{mockData}}</p>
+                <!-- <p>{{mockData}}</p> -->
+                <ul>
+                    <li ng-repeat="event in mockData">{{event.category}}</li>
+                </ul>
             </div>
 
             <div ng-controller="SecondController">
