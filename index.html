@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -18,16 +18,26 @@
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body ng-app='eventsApp'>
-  
-        <h1>Hi! This is Your Angular Application Boilerplate.</h1>
-        
-        <div ng-controller="mockDataController">
-            <p>{{mockData}}</p>
-            <p>hello</p>
-        </div>
 
-        <div ng-controller="SecondController">
-            <p>{{welcomeAgain}}</p>
+        <div class="container">
+
+            <h1>Events Page</h1>
+            
+            <div class="media" ng-controller="mockDataController">
+                <div ng-repeat="event in mockData">
+                    <div class="media-left">
+                        <a href="#">
+                          <img class="media-object" src="http://www.freegorifero.com/assets/square_999999.gif" alt="{{event.name}}">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h4>{{event.date}} {{event.name}}</h4>
+                        <p>{{event.description | limitTo: 200}}...</p>
+                    </div>
+                    <br>
+                    <br>
+                </div>
+            </div>
         </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
