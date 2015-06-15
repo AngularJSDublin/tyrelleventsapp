@@ -19,33 +19,13 @@
     </head>
     <body ng-app='eventsApp'>
 
-        <div class="container">
-
-            <h1>Events Page</h1>
-            
-            <div class="media" ng-controller="mockDataController">
-                <div ng-repeat="event in mockData">
-                    <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="http://www.freegorifero.com/assets/square_999999.gif" alt="{{event.name}}">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4>{{event.date}} {{event.name}}</h4>
-                        <p>{{event.description | limitTo: 200}}...</p>
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </div>
+        <div ng-view=""></div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
-
         <script src="assets/js/vendor/bootstrap.min.js"></script>
-
         <script src="assets/js/vendor/angular.min.js"></script>
-
+        <script src="assets/js/vendor/angular.route.js"></script>
         <script src="app/app.js"></script>
         <script src="assets/js/controllers/controller.js"></script>
 
