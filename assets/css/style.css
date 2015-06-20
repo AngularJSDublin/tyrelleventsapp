@@ -1,0 +1,44 @@
+/*Font*/
+body, h1, h2, h3, h4, h5, p, a {
+	font-weight: 200;
+}
+
+/*Home*/
+.home-page-title {
+	background-color: #f2f2f2;
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+.home-page-title h1{
+	position: relative;
+	top: 50px;
+}
+
+/*Images*/
+.rounded-images {
+	border-radius: 100%;
+}
+
+/*Media Element*/
+.media-event-name {
+
+}
+
+.media-event-date {
+	font-size: 14px;
+	color: #dbdbdb;
+}
+
+.media-section {
+	background-color: #fafafa;
+	padding: 20px 10px 0px 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 1px solid #f2f2f2;
+}
+
+.btn-default {
+	background-image: none;
+	float: right;
+}
