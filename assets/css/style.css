@@ -57,12 +57,29 @@ body, h1, h2, h3, h4, h5, p, a {
 .login-form {
   width: 400px;
   position: relative;
-  left: 32%;
+  left: 20%;
   top: 10em;
   background-color: #f2f2f2;
   padding: 60px;
   border: 1px solid #dbdbdb;
   border-radius: 5px;
+}
+
+/*Signup*/
+.signup-form {
+  width: 400px;
+  position: relative;
+  left: 20%;
+  top: 9em;
+  background-color: #f2f2f2;
+  padding: 60px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.signup-btn {
+	background: #fff;
+	margin-right: 10px;
 }
 
 /*Navbar*/
