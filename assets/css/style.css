@@ -1,0 +1,29 @@
+.container {
+  width: 700px ;
+  margin-left: auto ;
+  margin-right: auto ;	
+}
+
+.eventHeader {
+	background: url("../images/eventdetailheader.jpg");
+	background-repeat: no-repeat;
+	height: 177px;
+	width: 525px;
+	position: relative;
+	background-size: 450px 170px;
+}
+
+.eventTitle {
+  position: absolute;
+  bottom: 5px;
+  color: white;
+}
+
+.eventDescription {
+  background-color: lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.angular-google-map-container { height: 400px; }
