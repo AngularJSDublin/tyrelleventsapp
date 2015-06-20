@@ -1,53 +1,36 @@
-<!doctype html>
-<html class="no-js" lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Tyrell Events App</title>
+    <title>Tyrell Events App</title>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="assets/css/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-theme.min.css">
 
-        <link rel="stylesheet" href="assets/css/style.css">
-        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body ng-app='eventsApp'>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app='eventsApp'>
 
-        <div class="container">
+<div ng-view></div>
 
-            <h1>Events Page</h1>
-            
-            <div class="media" ng-controller="mockDataController">
-                <div ng-repeat="event in mockData">
-                    <div class="media-left">
-                        <a href="#">
-                          <img class="media-object" src="http://www.freegorifero.com/assets/square_999999.gif" alt="{{event.name}}">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4>{{event.date}} {{event.name}}</h4>
-                        <p>{{event.description | limitTo: 200}}...</p>
-                    </div>
-                    <br>
-                </div>
-            </div>
-        </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="assets/js/vendor/jquery-1.11.3.min.js"></script>
+<script src="assets/js/vendor/bootstrap.min.js"></script>
 
-        <script src="assets/js/vendor/bootstrap.min.js"></script>
+<script src="assets/js/vendor/angular.min.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app/app.js"></script>
+<script src="assets/js/controllers/controller.js"></script>
 
-        <script src="assets/js/vendor/angular.min.js"></script>
 
-        <script src="app/app.js"></script>
-        <script src="assets/js/controllers/controller.js"></script>
-
-    </body>
+</body>
 </html>
