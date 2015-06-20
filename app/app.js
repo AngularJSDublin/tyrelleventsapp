@@ -24,6 +24,10 @@
 	        templateUrl: 'assets/js/templates/register.html',
 	        controller: 'registerController'
 	      }).
+	       when('/signup/', {
++	        templateUrl: 'assets/js/templates/signup.html',
++	        controller: 'signupController'
++	      }).
 	      otherwise({
 	        redirectTo: '/'
 	      });
