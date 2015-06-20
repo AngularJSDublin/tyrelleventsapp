@@ -5,9 +5,7 @@
 	// Get All Events
 	.controller('mockDataController', ['$scope', '$http', function($scope, $http){
 		$http.get('https://tyrelleventsdb.firebaseio.com/events.json').success(function(data){
-			$scope.mockData = data.filter(function(d){
-				return d!==null;
-			});
+			$scope.mockData = data;
 		});
 	}])
 
