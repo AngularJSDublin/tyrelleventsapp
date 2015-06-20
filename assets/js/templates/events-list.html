@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Events Page</h1>        
+    <div class="media" ng-controller="mockDataController">
+        <div ng-repeat="event in mockData">
+            <div class="media-left">
+                <a href="#/events/{{$index + 1}}">
+                  <img class="media-object" src="http://www.freegorifero.com/assets/square_999999.gif" alt="{{event.name}}">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4>{{event.date}} {{event.name}}</h4>
+                <p>{{event.description | limitTo: 200}}...</p>
+                <a href="#/events/{{$index + 1}}" class="btn btn-default" data-event="{{event.name}}">Read More</a>
+            </div>
+            <br>
+        </div>
+    </div>    
+</div>
