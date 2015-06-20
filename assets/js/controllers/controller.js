@@ -10,7 +10,7 @@
 	}])
 
 	// Get All Events
-	.controller('singleEventController', ['$scope', '$http', function($scope, $http){
+	.controller('singleEventController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
 		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
 			$scope.eventData = data;
 		});
