@@ -1,9 +1,13 @@
 <div class="container">
-   <h2>Register</h2>
-  <form ng-submit="createAccount(email,password)">
-      <input ng-model="email" type="email" placeholder="username">
-      <input ng-model="password" type="password" placeholder="password" id="password">
-      <input type="password" placeholder="confirm password" id="confirm">
-      <input type="submit" value="Submit">
-  </form>
+	<div class="signup-form" align="center">
+	   <h2>Register</h2>
+	  <form ng-submit="createAccount(email,password)">
+	  	  <div class="form-group">
+		      <input ng-model="email" type="email" placeholder="username">
+		      <input ng-model="password" type="password" placeholder="password" id="password">
+		      <input type="password" placeholder="confirm password" id="confirm">
+		      <input type="submit" class="signup-btn" value="Submit">
+	      </div>
+	  </form>
+	</div>
 </div>
