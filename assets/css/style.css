@@ -52,3 +52,23 @@ body, h1, h2, h3, h4, h5, p, a {
 	background-image: none;
 	float: right;
 }
+
+/*Login*/
+.login-form {
+  width: 400px;
+  position: relative;
+  left: 32%;
+  top: 12em;
+  background-color: #f2f2f2;
+  padding: 60px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+/*Navbar*/
+.navbar-default {
+   background-image: none;
+   border-radius: 0px; 
+   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075); 
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);
+}

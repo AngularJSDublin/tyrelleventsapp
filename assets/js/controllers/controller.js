@@ -5,7 +5,9 @@
 	// Get All Events
 	.controller('mockDataController', ['$scope', '$http', function($scope, $http){
 		$http.get('https://tyrelleventsdb.firebaseio.com/events.json').success(function(data){
-			$scope.mockData = data;
+			$scope.mockData = data.filter(function(d){
+				return d!==null;
+			});
 		});
 	}])
 
@@ -14,11 +16,14 @@
 	.controller('eventDetailController', ['$scope', '$routeParams', '$http',
 	  function($scope, $routeParams, $http) {
 	    $scope.eventId = $routeParams.eventId;
-
 		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
 			$scope.eventData = data;
 		});	    
-	  }]);
+	  }])
+
+	.controller('loginController', ['$scope', function($scope){
+		$scope = null;
+	}])
 	
 })();
 
