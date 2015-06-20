@@ -9,17 +9,15 @@
 		});
 	}])
 
-	// Get All Events
-	.controller('singleEventController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams){
-		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
-			$scope.eventData = data;
-		});
-	}])
 
 	// Routing
-	.controller('eventDetailController', ['$scope', '$routeParams',
-	  function($scope, $routeParams) {
+	.controller('eventDetailController', ['$scope', '$routeParams', '$http',
+	  function($scope, $routeParams, $http) {
 	    $scope.eventId = $routeParams.eventId;
+
+		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
+			$scope.eventData = data;
+		});	    
 	  }]);
 	
 })();
