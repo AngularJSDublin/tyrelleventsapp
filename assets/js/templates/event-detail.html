@@ -1,10 +1,14 @@
 <div class="container" ng-controller="eventDetailController">
     <div class="event">
-        <h1>Event Details</h1>
+        <div class="eventHeader">
+          <div class="eventTitle">
+          	<h1>Event Details</h1>
+          </div>
+        </div>
         <div>
             <h2>{{eventData.date}} {{eventData.name}}</h2>
-            <p>{{eventData.description}}</p>
-            <p>{{eventData.location.lat}}, {{eventData.location.long}}</p>
+            <p class="eventDescription">{{eventData.description}}</p>
         </div>
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
     </div>
 </div>
