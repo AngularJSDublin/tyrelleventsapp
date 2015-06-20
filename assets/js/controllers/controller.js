@@ -9,7 +9,6 @@
 		});
 	}])
 
-
 	// Routing
 	.controller('eventDetailController', ['$scope', '$routeParams', '$http',
 	  function($scope, $routeParams, $http) {
