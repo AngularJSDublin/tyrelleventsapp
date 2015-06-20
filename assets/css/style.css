@@ -31,11 +31,21 @@ body, h1, h2, h3, h4, h5, p, a {
 }
 
 .media-section {
-	background-color: #fafafa;
+	background-color: #fff;
 	padding: 20px 10px 0px 10px;
 	margin-bottom: 10px;
 	border-radius: 5px;
 	border: 1px solid #f2f2f2;
+}
+
+.media-section:hover {
+	background-color: #fafafa;
+	border: 1px solid #dbdbdb;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
 }
 
 .btn-default {
