@@ -18,7 +18,7 @@
 		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
 			$scope.eventData = data;
 		});	    
-	  }]);
+	 }])
 	
 })();
 

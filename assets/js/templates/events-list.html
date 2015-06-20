@@ -10,7 +10,7 @@
             <div class="media-body">
                 <h4>{{event.date}} {{event.name}}</h4>
                 <p>{{event.description | limitTo: 200}}...</p>
-                <a href="#/events/{{$index + 1}}" class="btn btn-default" data-event="{{event.name}}">Read More</a>
+                <a href="#/events/{{$index}}" class="btn btn-default" data-event="{{event.name}}">Read More</a>
             </div>
             <br>
         </div>

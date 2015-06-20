@@ -16,6 +16,10 @@
 	        templateUrl: 'assets/js/templates/event-detail.html',
 	        controller: 'eventDetailController'
 	      }).
+	      when('/register', {
+	        templateUrl: 'assets/js/templates/register.html',
+	        controller: 'registerController'
+	      }).
 	      otherwise({
 	        redirectTo: '/'
 	      });
