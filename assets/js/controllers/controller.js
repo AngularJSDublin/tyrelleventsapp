@@ -26,15 +26,5 @@
 			};
 		});	    
 	  }])
-
-
-	.controller('loginController', ['$scope', function($scope){
-		$scope = null;
-	}])
-
-	.controller('signupController', ['$scope', function($scope){
-		$scope = null;
-	}])
-	
 })();
 

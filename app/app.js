@@ -20,9 +20,9 @@
 	        templateUrl: 'assets/js/templates/login.html',
 	        controller: 'loginController'
 	      }).
-	      when('/signup/', {
-	        templateUrl: 'assets/js/templates/signup.html',
-	        controller: 'signupController'
+	      when('/register', {
+	        templateUrl: 'assets/js/templates/register.html',
+	        controller: 'registerController'
 	      }).
 	      otherwise({
 	        redirectTo: '/'
