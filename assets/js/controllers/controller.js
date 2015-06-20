@@ -17,8 +17,16 @@
 		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
 			$scope.eventData = data;
 			$scope.map = { center: { latitude: data.location.lat, longitude: data.location.lng }, zoom: 8 };
+			$scope.marker = {
+			      id: 0,
+			      coords: {
+			        latitude: data.location.lat,
+			        longitude: data.location.lng
+			      }
+			};
 		});	    
 	  }])
+
 
 	.controller('loginController', ['$scope', function($scope){
 		$scope = null;
