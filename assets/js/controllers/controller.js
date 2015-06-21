@@ -15,7 +15,7 @@
 	    $scope.eventId = $routeParams.eventId;
 		$http.get('https://tyrelleventsdb.firebaseio.com/events/'+ $routeParams.eventId +'.json').success(function(data){
 			$scope.eventData = data;
-			$scope.map = { center: { latitude: data.location.lat, longitude: data.location.lng }, zoom: 14 };
+			$scope.map = { center: { latitude: data.location.lat, longitude: data.location.lng }, zoom: 15 };
 			$scope.marker = {
 			      id: 0,
 			      coords: {

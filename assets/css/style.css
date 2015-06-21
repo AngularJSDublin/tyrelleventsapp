@@ -99,8 +99,10 @@ body, h1, h2, h3, h4, h5, p, a {
 .eventHeader {
 	background: url("../images/eventdetailheader.jpg");
 	background-repeat: no-repeat;
+	background-size: cover !important;
+	background-position: center center !important;
 	height: 177px;
-	width: 525px;
+	width: 100%;
 	position: relative;
 	background-size: 450px 170px;
 }
