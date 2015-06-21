@@ -6209,7 +6209,124 @@ Original idea from: http://stackoverflow.com/questions/22758950/google-map-drawi
               mapOptions = angular.extend({}, DEFAULTS, opts, {
                 center: _this.getCoords(scope.center),
                 zoom: scope.zoom,
-                bounds: scope.bounds
+                bounds: scope.bounds,
+                zoomControl: false,
+                disableDefaultUI: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                draggable: false,
+                styles: [
+                {
+                  "featureType": "transit.station.rail",
+                  "stylers": [
+                    { "visibility": "off" }
+                  ]
+                },{
+                  "featureType": "transit.line",
+                  "stylers": [
+                    { "visibility": "off" }
+                  ]
+                },{
+                  "featureType": "road.arterial",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    { "color": "#88BCD7" }
+                  ]
+                },{
+                  "featureType": "road.arterial",
+                  "elementType": "labels.text.stroke",
+                  "stylers": [
+                    { "color": "#ffffff" }
+                  ]
+                },
+                {
+                  "featureType": "road.local",
+                  "elementType": "geometry",
+                  "stylers": [
+                    { "color": "#3E75BB" },
+                    { "saturation": 0 },
+                    { "lightness": 28 }
+                  ]
+                },{
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    { "color": "#88BCD7" },
+                    { "saturation": 100 },
+                    { "lightness": -100 }
+                  ]
+                },{
+                  "featureType": "landscape.man_made",
+                  "stylers": [
+                    { "color": "#ffffff" }
+                  ]
+                },{
+                  "featureType": "landscape.natural",
+                  "stylers": [
+                    { "color": "#ffffff" }
+                  ]
+                },{
+                  "featureType": "poi",
+                  "elementType": "geometry",
+                  "stylers": [
+                    { "color": "#e3e3e3" },
+                    { "lightness": -10 }
+                  ]
+                },{
+                  "featureType": "poi",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    { "color": "#000000" }
+                  ]
+                },{
+                  "featureType": "poi",
+                  "elementType": "labels.text.stroke",
+                  "stylers": [
+                    { "color": "#ffffff" }
+                  ]
+                },{
+                  "featureType": "road.arterial",
+                  "elementType": "geometry",
+                  "stylers": [
+                    { "color": "#3E75BB" },
+                    { "saturation": 0 },
+                    { "lightness": 28 }
+                  ]
+                },{
+                  "featureType": "road.highway",
+                  "stylers": [
+                    { "color": "#3E75BB" },
+                    { "saturation": 0 },
+                    { "lightness": 28 }
+                  ]
+                },{
+                  "featureType": "poi",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                    { "saturation": -100 }
+                  ]
+                },{
+                  "featureType": "transit.station.bus",
+                  "elementType": "labels.text.fill",
+                  "stylers": [
+                    { "saturation": -100 },
+                    { "color": "#36312f" }
+                  ]
+                },{
+                  "featureType": "transit.station.bus",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                    { "color": "#454a44" },
+                    { "saturation": -100 },
+                    { "visibility": "off" }
+                  ]
+                },{
+                  "featureType": "road.transit",
+                  "elementType": "labels.icon",
+                  "stylers": [
+                    { "visibility": "off" }
+                  ]
+                }
+              ]
               });
               _gMap = new google.maps.Map(el.find('div')[1], mapOptions);
               _gMap['uiGmap_id'] = uuid.generate();

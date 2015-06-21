@@ -2,8 +2,9 @@
 	
 	var app = angular.module('eventsApp', [
 		'ngRoute',
-		'eventsController'
-	])
+		'eventsController',
+		'uiGmapgoogle-maps'
+	]);
 
 	app.config(['$routeProvider',
 	  function($routeProvider) {
