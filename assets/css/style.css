@@ -101,16 +101,22 @@ body, h1, h2, h3, h4, h5, p, a {
 	background-repeat: no-repeat;
 	background-size: cover !important;
 	background-position: center center !important;
-	height: 177px;
+	height: 250px;
 	width: 100%;
 	position: relative;
 	background-size: 450px 170px;
+	display: table;
 }
-
 .eventTitle {
-  position: absolute;
-  bottom: 5px;
-  color: white;
+	display: table-cell;
+	vertical-align: middle;
+}
+.eventTitle h1 {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
 }
 
 .eventDescription {

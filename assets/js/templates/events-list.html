@@ -1,8 +1,8 @@
 
 <div class="container">
-    <h1>Events Page</h1>        
+    <h1>Latest Events</h1>        
     <div class="media" ng-controller="mockDataController">
-        <div ng-repeat="event in mockData" class="media-section">
+        <div ng-repeat="event in mockData | orderBy:'date'" class="media-section">
             <div class="media-left">
                 <a href="#/events/{{$index}}">
                   <img class="media-object rounded-images" ng-src="{{event.image.small}}" alt="{{event.name}}">
