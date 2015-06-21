@@ -1,13 +1,14 @@
 <div class="container">
-	<div class="login-form" align="center">
-		<form>
+	<h2>Login</h2>
+	<div class="signup-form" align="center">
+		<form ng-submit="login(email,password)">
 		  <div class="form-group">
 		    <label for="exampleInputEmail1">Email address</label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+		    <input ng-model="email" type="email" class="form-control" placeholder="Email" novalidate>
 		  </div>
 		  <div class="form-group">
 		    <label for="exampleInputPassword1">Password</label>
-		    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+		    <input ng-model="password" type="password" class="form-control"  placeholder="Password" novalidate>
 		  </div>
 		  <button type="submit" class="btn btn-default">Submit</button>
 		</form>
