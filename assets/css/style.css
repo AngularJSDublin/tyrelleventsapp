@@ -167,3 +167,18 @@ body, h1, h2, h3, h4, h5, p, a {
   border: 1px solid #dbdbdb;
   border-radius: 5px;
 }
+
+/*Validation*/
+input.ng-invalid-email {
+	border: 1px solid red;
+}
+p.error {
+	display: none;
+	font-size: 12px;
+	color: red;
+}
+
+input.ng-invalid-email + .error {
+	display: inline-block;
+}
+

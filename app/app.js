@@ -19,7 +19,7 @@
 	      }).
 	      when('/login/', {
 	        templateUrl: 'assets/js/templates/login.html',
-	        controller: 'loginController'
+	        controller: 'registerController'
 	      }).
 	      when('/register', {
 	        templateUrl: 'assets/js/templates/register.html',
