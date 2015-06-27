@@ -1,23 +1,24 @@
 <div class="container">
- 	
-  
-	<div class="signup-form" align="center">
-    <h2>Sign Up</h2><br>
-     <form ng-submit="createAccount(email,password)">
-		  <div class="form-group">
-		    <label for="exampleInputEmail1">Email address</label>
-		    <input ng-model="email" class="form-control" type="email" placeholder="Email">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Password</label>
-		    <input ng-model="password" class="form-control" type="password" placeholder="Password">
-		  </div>
-		  <div class="form-group">
-		    <label for="exampleInputPassword1">Confirm Password</label>
-		    <input ng-model="confirmPassword" class="form-control" type="password" placeholder="confirm password" id="confirm">
-		  </div>
-		  <p>{{statusMessage}}</p>
+
+
+  <div class="signup-form" align="center">
+    <h2>Sign Up</h2>
+    <br>
+    <form ng-submit="createAccount(email,password,confirmPassword)">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input ng-model="email" class="form-control" type="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input ng-model="password" class="form-control" type="password" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Confirm Password</label>
+        <input ng-model="confirmPassword" class="form-control" type="password" placeholder="confirm password" id="confirm">
+      </div>
+      <p>{{statusMessage}}</p>
       <input class="btn btn-default" type="submit" value="Submit">
-		</form>
-	</div>
+    </form>
+  </div>
 </div>
