@@ -1,7 +1,7 @@
 <div class="container">
-	<h2>Login</h2>
+	<h2>Register</h2>
 	<div class="signup-form" align="center">
-		<form ng-submit="login(email,password)" novalidate>
+	  <form ng-submit="createAccount(email,password)" novalidate>
 	  	  <div class="form-group">
 	  	  	  <label for="email">Email address</label>
 		      <input ng-model="email" class="form-control" type="email" placeholder="Email">
@@ -10,7 +10,6 @@
 	      <div class="form-group">
 	      	  <label for="password">Password</label>
 		      <input ng-model="password" type="password" class="form-control" placeholder="Password">
-		      <a href="#" ng-click="resetPass(email);$event.preventDefault();">Forgot Password</a>
 	      </div>
 	      <input type="submit" class="btn btn-default" value="Submit">
 	  </form>

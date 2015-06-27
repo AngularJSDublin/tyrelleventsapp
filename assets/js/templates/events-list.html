@@ -1,11 +1,11 @@
 
 <div class="container">
-    <h1>Events Page</h1>        
+    <h1>Latest Events</h1>        
     <div class="media" ng-controller="mockDataController">
-        <div ng-repeat="event in mockData" class="media-section">
+        <div ng-repeat="event in mockData | orderBy:'date'" class="media-section">
             <div class="media-left">
-                <a href="#/events/{{$index + 1}}">
-                  <img class="media-object rounded-images" src="http://www.freegorifero.com/assets/square_999999.gif" alt="{{event.name}}">
+                <a href="#/events/{{$index}}">
+                  <img class="media-object rounded-images" ng-src="{{event.image.small}}" alt="{{event.name}}">
                 </a>
             </div>
             <div class="media-body">
@@ -14,7 +14,7 @@
                 <span class="media-event-date"> {{event.date}}</span>
                 </h4>
                 <p>{{event.description | limitTo: 200}}...</p>
-                <a href="#/events/{{$index}}" class="btn btn-default" data-event="{{event.name}}">Read More</a>
+                <a href="#/events/{{$index}}" class="btn btn-default">Read More</a>
             </div>
             <br>
         </div>

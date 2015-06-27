@@ -41,6 +41,26 @@ angular.module('eventsApp')
       }
     });
   }
+
+  // Reset Password
+  $scope.resetPass = function (email){
+    var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/");
+    ref.resetPassword({
+      email: email
+    }, function(error) {
+      if (error) {
+        switch (error.code) {
+          case "INVALID_USER":
+            console.log("The specified user account does not exist.");
+            break;
+          default:
+            console.log("Error resetting password:", error);
+        }
+      } else {
+        console.log("Password reset email sent successfully!");
+      }
+    });
+  }
   
 }]);  
 

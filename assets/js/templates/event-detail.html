@@ -1,12 +1,13 @@
 <div class="container" ng-controller="eventDetailController">
     <div class="event">
-        <div class="eventHeader">
+        <div class="eventHeader" style="background-image: url('{{eventData.image.large}}');">
           <div class="eventTitle">
-          	<h1>Event Details</h1>
+          	<h1>{{eventData.name}}</h1>
           </div>
         </div>
+        <a href="#/events" class="btn btn-default">View All Events</a>
         <div>
-            <h2>{{eventData.date}} {{eventData.name}}</h2>
+            <h2>Date: {{eventData.date}}</h2>
             <p class="eventDescription">{{eventData.description}}</p>
         </div>
         <ui-gmap-google-map center='map.center' zoom='map.zoom'>

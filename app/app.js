@@ -2,8 +2,9 @@
 	
 	var app = angular.module('eventsApp', [
 		'ngRoute',
-		'eventsController'
-	])
+		'eventsController',
+		'uiGmapgoogle-maps'
+	]);
 
 	app.config(['$routeProvider',
 	  function($routeProvider) {
@@ -18,7 +19,7 @@
 	      }).
 	      when('/login/', {
 	        templateUrl: 'assets/js/templates/login.html',
-	        controller: 'loginController'
+	        controller: 'registerController'
 	      }).
 	      when('/signup', {
 	        templateUrl: 'assets/js/templates/signup.html',

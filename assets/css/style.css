@@ -1,28 +1,45 @@
+/*/////////////////////////
+	Base Styles
+/////////////////////////*/
+
 /*Font*/
 body, h1, h2, h3, h4, h5, p, a {
 	font-weight: 200;
 }
 
-/*Home*/
-.home-page-title {
-	background-color: #f2f2f2;
-	height: 200px;
-	margin-bottom: 50px;
+.container {
+  width: 700px ;
+  margin: 80px auto 0;
 }
 
-.home-page-title h1{
-	position: relative;
-	top: 50px;
+/*/////////////////////////
+	Header
+/////////////////////////*/
+
+/*Navbar*/
+.navbar-default {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+   background-image: none;
+   border-radius: 0px; 
+   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075); 
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);
 }
+
+.signup-btn {
+	margin-right: 20px;
+}
+
+/*/////////////////////////
+	Events list
+/////////////////////////*/
 
 /*Images*/
 .rounded-images {
 	border-radius: 100%;
-}
-
-/*Media Element*/
-.media-event-name {
-
 }
 
 .media-event-date {
@@ -53,6 +70,80 @@ body, h1, h2, h3, h4, h5, p, a {
 	float: right;
 }
 
+/*/////////////////////////
+	Event Details
+/////////////////////////*/
+
+.eventHeader {
+	background: url("../images/eventdetailheader.jpg");
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	background-position: center center !important;
+	height: 250px;
+	width: 100%;
+	position: relative;
+	background-size: 450px 170px;
+	display: table;
+}
+.eventTitle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.eventTitle h1 {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.eventDescription {
+  background-color: lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.angular-google-map-container { 
+	height: 400px; 
+}
+
+/*/////////////////////////
+	Forms
+/////////////////////////*/
+
+.eventHeader {
+	background: url("../images/eventdetailheader.jpg");
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	background-position: center center !important;
+	height: 250px;
+	width: 100%;
+	position: relative;
+	background-size: 450px 170px;
+	display: table;
+}
+.eventTitle {
+	display: table-cell;
+	vertical-align: middle;
+}
+.eventTitle h1 {
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.eventDescription {
+  background-color: lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+
+.angular-google-map-container { height: 400px; }
+
 /*Login*/
 .login-form {
   width: 400px;
@@ -77,46 +168,17 @@ body, h1, h2, h3, h4, h5, p, a {
   border-radius: 5px;
 }
 
-.signup-btn {
-	background: #fff;
-	margin-right: 10px;
+/*Validation*/
+input.ng-invalid-email {
+	border: 1px solid red;
+}
+p.error {
+	display: none;
+	font-size: 12px;
+	color: red;
 }
 
-/*Navbar*/
-.navbar-default {
-   background-image: none;
-   border-radius: 0px; 
-   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075); 
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);
+input.ng-invalid-email + .error {
+	display: inline-block;
 }
-
-.container {
-  width: 700px ;
-  margin-left: auto ;
-  margin-right: auto ;	
-}
-
-.eventHeader {
-	background: url("../images/eventdetailheader.jpg");
-	background-repeat: no-repeat;
-	height: 177px;
-	width: 525px;
-	position: relative;
-	background-size: 450px 170px;
-}
-
-.eventTitle {
-  position: absolute;
-  bottom: 5px;
-  color: white;
-}
-
-.eventDescription {
-  background-color: lightgray;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-}
-
-.angular-google-map-container { height: 400px; }
 
