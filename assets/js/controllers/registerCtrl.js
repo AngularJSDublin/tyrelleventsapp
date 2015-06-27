@@ -1,20 +1,28 @@
 angular.module('eventsApp')
 //Register 
-.controller('registerController', [ '$scope', function($scope) {
+.controller('signupController', [ '$scope', function($scope) {
     $scope.email = "";
     $scope.password = "";
+    $scope.confirmPassword = "";
   
   // Creating User Accounts
-  $scope.createAccount = function (email, password){
+  $scope.createAccount = function (email, password, confirmPassword){
+    if($scope.password !== $scope.confirmPassword){
+      $scope.statusMessage = "Looks like your password doens't match";
+      return;
+    }
     var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/");
     ref.createUser({
       email    : email,
-      password : password
+      password : password,
+      confirmPassword : confirmPassword
     }, function(error, userData) {
+			
+			
       if (error) {
         console.log("Error creating user:", error);
       } else {
-        console.log("Successfully created user account with uid:", userData.uid);
+        $scope.statusMessage = "Your account has been created successfully ";;
       }
     });
   };
