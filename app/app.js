@@ -25,6 +25,10 @@
 	        templateUrl: 'assets/js/templates/signup.html',
 	        controller: 'signupController'
 	      }).
+	      when('/add-event', {
+	        templateUrl: 'assets/js/templates/add-event.html',
+	        controller: 'eventController'
+	      }).
 	      otherwise({
 	        redirectTo: '/'
 	      });
