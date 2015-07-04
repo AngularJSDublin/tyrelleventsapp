@@ -8,6 +8,9 @@ angular.module('eventsApp')
     $http.get('https://tyrelleventsdb.firebaseio.com/events.json').success(
       function(data) {
         $scope.mockData = data;
+        for (var key in data) {
+          $scope.mockData[key].eventFirebaseId = key;
+        }
       });
 
   }]);
