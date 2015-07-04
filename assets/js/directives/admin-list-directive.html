@@ -1,0 +1,16 @@
+<div class="media">
+  <div ng-repeat="(key, user) in adminUsers | filter:{role: 'admin'}" class="media-section">
+    <div class="media-body">    
+      <div>
+        <span class="adminname">{{user.firstName}}</span>
+        <span class="adminname">{{user.lastName}}</span>
+        <span class="adminname adminemail">{{user.email}}</span>
+        <div class="adminbuttons">
+          <button ng-click="remove(key)" class="btn btn-danger">Remove</button>
+          <button class="btn btn-default">Edit</button>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+</div>
