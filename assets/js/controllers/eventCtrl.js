@@ -45,6 +45,7 @@ angular.module('eventsApp')
 
   // Editing Event
   $scope.editEvent = function (){
+    console.log('$routeParams.eventId ', $routeParams.eventId);
 
     var eventRef = new Firebase("https://tyrelleventsdb.firebaseio.com/events/" + $routeParams.eventId );
     eventRef.update($scope.eventData,function(error){
