@@ -1,7 +1,9 @@
 angular.module('eventsApp')
-  .controller('loginController', ['$scope', '$http', '$location', 'profile',
+  .controller('loginController', ['$rootScope', '$scope', '$http', '$location',
+    '$cookies',
+    'profile',
     function(
-      $scope, $http, $location, profile) {
+      $rootScope, $scope, $http, $location, $cookies, profile) {
 
       // Logging Users In
       $scope.login = function(email, password) {
@@ -16,12 +18,11 @@ angular.module('eventsApp')
             console.log("Authenticated successfully with payload:",
               authData);
 
-
-
             $http.get('https://tyrelleventsdb.firebaseio.com/users/' +
               authData.uid + '.json?' + 'auth=' + authData.token).success(
               function(data) {
-                angular.extend(profile, data);
+                $cookies.putObject('userProfile', data);
+                angular.extend($rootScope.profile, data);
                 if (data.role == 'admin') {
                   $location.path('/admin-home');
                 } else {

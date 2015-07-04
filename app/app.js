@@ -1,13 +1,14 @@
-(function () {
+(function() {
 
   var app = angular.module('eventsApp', [
-		'ngRoute',
-		'eventsController',
-		'uiGmapgoogle-maps'
-	]);
+    'ngRoute',
+    'ngCookies',
+    'eventsController',
+    'uiGmapgoogle-maps'
+  ]);
 
   app.config(['$routeProvider',
-	  function ($routeProvider) {
+    function($routeProvider) {
       $routeProvider.
       when('/', {
         templateUrl: 'assets/js/templates/events-list.html',
@@ -40,6 +41,18 @@
       otherwise({
         redirectTo: '/'
       });
-	  }]);
+    }
+  ]);
+
+  app.run(['$rootScope', '$cookies', function($rootScope, $cookies) {
+    var user = $cookies.getObject('userProfile');
+    console.log(user);
+    if (user) {
+      $rootScope.profile = user;
+    } else {
+      $rootScope.profile = {};
+    }
+
+  }]);
 
 })();

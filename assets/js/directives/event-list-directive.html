@@ -10,7 +10,6 @@
         <span>{{event.name}}</span>
         <span class="media-event-date"> {{event.date}}</span>
       </h4>
-      <p>{{event.eventFirebaseId}}</p>
       <p>{{event.description | limitTo: 200}}...</p>
       <a href="#/events/{{event.eventFirebaseId}}" class="btn btn-default">View</a>
       <div ng-if="profile.role=='admin'">
