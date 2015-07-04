@@ -33,6 +33,10 @@
         templateUrl: 'assets/js/templates/add-event.html',
         controller: 'eventController'
       }).
+      when('/edit-event', {
+        templateUrl: 'assets/js/templates/edit-event.html',
+        controller: 'eventController'
+      }).
       otherwise({
         redirectTo: '/'
       });

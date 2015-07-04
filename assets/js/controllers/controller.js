@@ -9,7 +9,7 @@
     var getToken = localStorage.getItem('firebase:session::tyrelleventsdb');
     var tokenStorage = JSON.parse(getToken);
 
-    $http.get('https://tyrelleventsdb.firebaseio.com/events.json?auth=' + tokenStorage.token).success(function (data) {
+    $http.get('https://tyrelleventsdb.firebaseio.com/events.json' ).success(function (data) {
       $scope.mockData = data;
     });
 	}])

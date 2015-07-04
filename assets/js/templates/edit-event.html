@@ -1,10 +1,11 @@
 <div class="container">
-    <h2>Add New Event</h2>
+    <h2>Edit Event</h2>
     <div class="signup-form" align="center">
-        <form ng-submit="addEvent(name,date,city,venue,category,description,allSpots,availableSpots,thumbnail,image,latitude,longitude)" novalidate>
+        <form ng-submit="editEvent(name,date,city,venue,category,description,allSpots,availableSpots,thumbnail,image,latitude,longitude)" novalidate>
           <div class="form-group">
               <label for="name">Name</label>
-              <input ng-model="name" class="form-control" type="text">
+              <input ng-model="name" class="form-control" type="text" placeholder="">
+              <!--{{data.name}}-->
           </div>
           
           <div class="form-group">
