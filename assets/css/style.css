@@ -205,3 +205,15 @@ input.ng-invalid-email + .error {
 .brand {
 	
 }
+
+.adminbuttons {
+	float: right;
+}
+
+.adminname {
+	font-size: 20px;
+}
+
+.adminemail {
+	padding-left: 50px;
+}

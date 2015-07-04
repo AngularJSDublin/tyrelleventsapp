@@ -6,7 +6,7 @@ angular.module('eventsApp')
     $scope.confirmPassword = "";
 
     // Creating User Accounts
-    $scope.createAccount = function (email, password, confirmPassword) {
+    $scope.createAccount = function (firstName, lastName, email, password, confirmPassword) {
       if ($scope.password !== $scope.confirmPassword) {
         $scope.statusMessage = "Looks like your password doesn't match";
         return;
@@ -16,10 +16,18 @@ angular.module('eventsApp')
         email: email,
         password: password,
         confirmPassword: confirmPassword
-      }, function (error) {
-        $scope.$apply(function () {
-          handleResponse(error);
-        });
+      }, function (error, authData) {
+
+        if (error) {
+          $scope.$apply(function () {
+            handleResponse(error);
+          })
+        } else {
+          var usersRef = ref.child("users/" + authData.uid);
+          var user = {firstName: firstName, lastName: lastName, email: email, role: 'user'};
+
+          usersRef.set(user); 
+        }
       });
     };
 

@@ -4,7 +4,15 @@
   <div class="signup-form" align="center">
     <h2>Sign Up</h2>
     <br>
-    <form ng-submit="createAccount(email,password,confirmPassword)">
+    <form ng-submit="createAccount(firstName,lastName,email,password,confirmPassword)">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input ng-model="firstName" class="form-control" placeholder="First Name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input ng-model="lastName" class="form-control" placeholder="Last Name">
+      </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input ng-model="email" class="form-control" type="email" placeholder="Email">

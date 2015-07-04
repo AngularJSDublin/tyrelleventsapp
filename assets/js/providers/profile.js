@@ -4,5 +4,5 @@ angular.module('eventsApp')
 .value('profile', {
   firstName: "",
   lastName: "",
-  role: ""
+  role: "",
 });
