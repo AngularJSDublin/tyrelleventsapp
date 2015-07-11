@@ -1,6 +1,6 @@
 angular.module('eventsApp')
 //Register
-.controller('eventController', [ '$scope', '$http' ,'$routeParams' ,function($scope, $http, $routeParams ) {
+.controller('eventController', [ '$scope', '$http' ,'$routeParams', '$location' ,function($scope, $http, $routeParams, $location ) {
     $scope.name = "";
     $scope.date = "";
     $scope.city = "";
@@ -50,9 +50,11 @@ angular.module('eventsApp')
     var eventRef = new Firebase("https://tyrelleventsdb.firebaseio.com/events/" + $routeParams.eventId );
     eventRef.update($scope.eventData,function(error){
       if(error){
-        console.log("Event not updated try again later")
+        console.log("Event not updated try again later");
       } else {
-        console.log("Event updated");
+				$http.get('/admin-home');
+				$location.path('/admin-home');
+        console.log("Event updated");				
       }
 
     });
