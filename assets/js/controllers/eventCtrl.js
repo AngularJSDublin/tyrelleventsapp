@@ -52,11 +52,16 @@ angular.module('eventsApp')
       if(error){
         console.log("Event not updated try again later");
       } else {
-        
-				// $http.get('/admin-home');
-				// $location.path('/admin-home');
-        console.log("Event updated");
+        $scope.$emit('notificationAlert',{
+          message:$scope.eventData.name + ' was updated sucessfully',
+          alertClass: 'success'
+        })
+        // Redirects user to events list
+        $scope.$apply(function(){
+          $location.path('/');
 
+          console.log("Event updated");
+        });
       }
 
     });

@@ -20,6 +20,14 @@ body, h1, h2, h3, h4, h5, p, a {
 	Header
 /////////////////////////*/
 
+.notification{
+	position: absolute;
+	width: 400px;
+	height: auto;
+	top:20px;
+	right: 20px;
+}
+
 /*Navbar*/
 .navbar-default {
 	background-color: #484848;
