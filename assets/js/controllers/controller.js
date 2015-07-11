@@ -4,12 +4,8 @@
 
 
   // Get All Events
-  .controller('mockDataController', ['$scope', '$http', 'token', function(
-    $scope, $http, token) {
-
-    var getToken = localStorage.getItem(
-      'firebase:session::tyrelleventsdb');
-    var tokenStorage = JSON.parse(getToken);
+  .controller('mockDataController', ['$scope', '$http', function(
+    $scope, $http) {
 
     $http.get('https://tyrelleventsdb.firebaseio.com/events.json').success(
       function(data) {
@@ -23,8 +19,6 @@
   }])
 
 
-
-  // Routing
   .controller('eventDetailController', ['$scope', '$routeParams', '$http',
     function($scope, $routeParams, $http) {
       $scope.eventId = $routeParams.eventId;
