@@ -37,11 +37,19 @@
           <a class="navbar-brand" href="#/"><img src="assets/images/tyrell-events-logo.png" alt=""></a>
         </div>
 
+      <div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <a href="#/login/"><button type="button" class="btn btn-default navbar-btn">Log In</button></a>
-          <a href="#/signup/"><button type="button" class="btn btn-default navbar-btn signup-btn">Sign Up</button></a>
+          <a ng-hide="profile.role=='admin'" href="#/login/"><button type="button" class="btn btn-default navbar-btn">Log In</button></a>
+          <a ng-hide="profile.role=='admin'" href="#/signup/"><button type="button" class="btn btn-default navbar-btn signup-btn">Sign Up</button></a>
+
+          <div ng-controller="loginController" ng-show="profile.role=='admin'" href="#/">
+            <button ng-click="logOut()" class="btn btn-default navbar-btn right" type="text" name="button">Log out</button>
+          </div>
+
         </div><!-- /.navbar-collapse -->
+      </div>
+
       </div><!-- /.container-fluid -->
     </nav>
 
