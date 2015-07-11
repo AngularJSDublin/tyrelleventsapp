@@ -6,28 +6,43 @@ angular.module('eventsApp')
     $scope.profile = profile;
 
     $http.get('https://tyrelleventsdb.firebaseio.com/users.json').success(
-      function(data) {
-        
-      //  var filteredData = data.filter(function(item) { return item[Object.keys(item)[0]].role === 'admin' });
-        var arr = Object.keys(data);
-        var filteredData = arr.map(function(val) { if (data[val].role === 'admin') return data[val] });
+      function(users) {
+        console.log('data: ', users);
 
-        $scope.adminUsers = filteredData;
+        $scope.adminUsers = [];
+
+        for(var key in users){
+          
+          //console.log(users[key]);
+          
+          if(users[key].role === 'admin'){
+            // create a new firebaseId key on the user object and assign simplelogin:34 or any other
+            // string to it it will be used to edit user 
+            users[key].firebaseId = key; 
+            $scope.adminUsers.push(users[key]);
+          }
+        }
+        console.log('$scope.adminUsers: ', $scope.adminUsers);        
       });
 
 
-    $scope.remove = function(user) {
+
+    $scope.remove = function(index, firebaseId) {
       
-	  var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/users" + user);
-	  ref.update({
-	    role: 'user'
-	  }, function(error) {
-        if (error) {
-          console.log('Synchronization failed');
-        } else {
-          console.log('Synchronization succeeded');
-        }
-	  });
+  	  var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/users/" + firebaseId);
+  	  ref.update({
+  	    role: 'user'
+  	  }, function(error) {
+          if (error) {
+            console.log('Synchronization failed');
+          } else {
+            console.log('Synchronization succedsdsd   eded ' + index);
+            //remove user from screen
+            $scope.$apply(function(){
+              $scope.adminUsers.splice(index, 1);
+            });
+          }
+  	  });
 
     }
   }]);
