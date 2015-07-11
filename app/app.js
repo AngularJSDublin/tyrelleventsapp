@@ -33,6 +33,10 @@
       when('/admin-list', {
         templateUrl: 'assets/js/templates/admin-list.html',
         controller: 'adminListCtrl'
+      }).
+      when('/edit-admin/:adminId', {
+        templateUrl: 'assets/js/templates/edit-admin.html',
+        controller: 'adminListCtrl'
       }).      
       when('/add-event', {
         templateUrl: 'assets/js/templates/add-event.html',

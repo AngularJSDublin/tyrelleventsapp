@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Edit Event</h2>
+    <div class="signup-form" align="center">
+        <form ng-submit="modify()" novalidate>
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input ng-model="adminUserData.name" class="form-control" type="text" placeholder="">
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input ng-model="adminUserData.email" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input ng-model="adminUserData.password" class="form-control" type="text">
+          </div>
+          <div class="form-group">
+              <label for="confirmpassword">Confirm Password</label>
+              <input ng-model="adminUserData.cpassword" class="form-control" type="text">
+          </div>
+          <input type="submit" class="btn btn-default" value="Submit">
+      </form>
+    </div>
+</div>
