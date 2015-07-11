@@ -44,5 +44,28 @@ angular.module('eventsApp')
           }
   	  });
 
+    }; 
+
+    $scope.modify = function(firebaseId) {
+
+      var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/users/" + firebaseId);
+      ref.update($scope.adminUserData, function(error) {
+        if(error){
+          console.log("Event not updated try again later");
+        } else {
+          $scope.$emit('notificationAlert',{
+            message:$scope.eventData.name + ' was updated sucessfully',
+            alertClass: 'success'
+          })
+          // Redirects user to events list
+          $scope.$apply(function(){
+            $location.path('/');
+
+            console.log("Event updated");
+          });
+        }
+      });
+
+
     }
   }]);

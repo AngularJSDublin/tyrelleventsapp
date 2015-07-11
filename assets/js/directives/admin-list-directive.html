@@ -7,7 +7,7 @@
         <span class="adminname adminemail">{{user.email}}</span>
         <div class="adminbuttons">
           <button ng-click="remove($index, user.firebaseId)" class="btn btn-danger">Remove</button>
-          <button class="btn btn-default">Edit</button>
+          <a href="#/edit-admin/{{user.firebaseId}}" class="btn btn-default">Edit</a>
         </div>
       </div>
     </div>
