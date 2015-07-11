@@ -52,9 +52,11 @@ angular.module('eventsApp')
       if(error){
         console.log("Event not updated try again later");
       } else {
-				$http.get('/admin-home');
-				$location.path('/admin-home');
-        console.log("Event updated");				
+        
+				// $http.get('/admin-home');
+				// $location.path('/admin-home');
+        console.log("Event updated");
+
       }
 
     });
