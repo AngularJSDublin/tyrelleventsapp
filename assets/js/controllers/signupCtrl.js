@@ -1,6 +1,6 @@
 angular.module('eventsApp')
-  //Sign Up 
-  .controller('signupController', ['$scope', function ($scope) {
+  //Sign Up
+  .controller('signupController', ['$scope','$location', function ($scope, $location) {
     $scope.email = "";
     $scope.password = "";
     $scope.confirmPassword = "";
@@ -26,7 +26,16 @@ angular.module('eventsApp')
           var usersRef = ref.child("users/" + authData.uid);
           var user = {firstName: firstName, lastName: lastName, email: email, role: 'user'};
 
-          usersRef.set(user); 
+          $scope.$emit('notificationAlert',{
+            message: 'Your account has been created sucessfully, you are now ready to login to the Tyrell Events app!',
+            alertClass: 'success'
+          })
+
+          $scope.$apply(function () {
+            $location.path('/login');
+          })
+
+          usersRef.set(user);
         }
       });
     };

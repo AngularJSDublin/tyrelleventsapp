@@ -53,7 +53,7 @@ angular.module('eventsApp')
         console.log("Event not updated try again later");
       } else {
         $scope.$emit('notificationAlert',{
-          message:$scope.eventData.name + ' was updated sucessfully',
+          message:  $scope.eventData.name + ' was updated sucessfully',
           alertClass: 'success'
         })
         // Redirects user to events list

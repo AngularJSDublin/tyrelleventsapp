@@ -5,7 +5,7 @@ angular.module('eventsApp')
     function(
       $rootScope, $scope, $http, $location, $cookies, profile) {
 
-      // Logging Users In
+      // Log Users In
       $scope.login = function(email, password) {
         var ref = new Firebase("https://tyrelleventsdb.firebaseio.com/");
         ref.authWithPassword({
@@ -34,7 +34,11 @@ angular.module('eventsApp')
         });
       }
 
-
-
+      // Log Users Out
+      $scope.logOut = function (data){
+        console.log("log out");
+          $cookies.remove('userProfile', data);
+            window.location.reload(true);
+      }
     }
   ]);

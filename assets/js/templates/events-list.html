@@ -2,11 +2,13 @@
 <div class="container">
     <h1 ng-hide="profile.role=='admin'">Latest Events</h1>
 
+    <!-- Shows only for admins -->
     <div ng-if="profile.role=='admin'">
       <h1>Welcome admin</h1>
       <a href="#/add-event/" class="btn btn-primary right">Add Event</a>
-      <a class="btn btn-default right">Edit Admins</a>
+      <a href="#/admin-list/" class="btn btn-default right">Edit Admins</a>
     </div>
+
     <event-list></event-list>
     </div>
 </div>

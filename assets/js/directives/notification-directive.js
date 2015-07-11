@@ -10,9 +10,9 @@ angular.module('eventsApp')
         $rootScope.$on('notificationAlert', function(e, data){
           scope.message = data.message;
           scope.alertClass = data.alertClass;
-          el.fadeIn(1000);
+          el.fadeIn(500);
           $timeout(function () {
-            el.fadeOut(1000);
+            el.fadeOut(500);
           }, 5000);
         })
       }
